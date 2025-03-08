@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="1">Start</layout>
+        <layout order="3">Game1</layout>
+        <layout order="5">Game2</layout>
+        <layout active="1" order="8">Game3</layout>
+        <event-sheet order="2">Event Start</event-sheet>
+        <event-sheet order="4">Event Game1</event-sheet>
+        <event-sheet order="6">Event Game2</event-sheet>
+        <event-sheet order="7">Event Controll</event-sheet>
+        <event-sheet order="9">Event Game3</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Mom/" />
+        <folder expanded="1" path="animation-folder/BallFire/" />
+        <folder expanded="1" path="animation-folder/Sister/" />
+        <folder expanded="1" path="animation-folder/P2Hit/" />
+        <folder expanded="1" path="animation-folder/PSmoke/" />
+        <folder expanded="1" path="animation-folder/Smoke/" />
+        <folder expanded="1" path="animation-folder/BambooS1/" />
+        <folder expanded="1" path="animation-folder/BambooS2/" />
+        <folder expanded="1" path="animation-folder/Ehit/" />
+        <folder expanded="1" path="animation-folder/Bamboo/" />
+        <folder expanded="1" path="animation-folder/BBArrow/" />
+        <folder expanded="1" path="animation-folder/Samurai/" />
+        <folder expanded="1" path="animation-folder/BGMenu/" />
+        <folder expanded="1" path="animation-folder/StartButton/" />
+        <folder expanded="1" path="animation-folder/OptionButton/" />
+        <folder expanded="1" path="animation-folder/ExisButton/" />
+        <folder expanded="1" path="animation-folder/BGOption/" />
+        <folder expanded="1" path="animation-folder/BackButton/" />
+        <folder expanded="1" path="animation-folder/MuteBG/" />
+        <folder expanded="1" path="animation-folder/Door/" />
+        <folder expanded="1" path="animation-folder/BGFadeO/" />
+        <folder expanded="1" path="animation-folder/BGFadeI/" />
+        <folder expanded="1" path="animation-folder/tadpole/" />
+        <folder expanded="1" path="animation-folder/Something/" />
+        <folder expanded="1" path="animation-folder/Kob/" />
+        <folder expanded="1" path="animation-folder/BallWater/" />
+        <folder expanded="1" path="animation-folder/GameName/" />
+        <folder expanded="1" path="animation-folder/Mushroom/" />
+        <folder expanded="1" path="animation-folder/Spore/" />
+        <folder expanded="1" path="animation-folder/MPop/" />
+        <folder expanded="1" path="animation-folder/Boss/" />
+        <folder expanded="1" path="animation-folder/BossHit/" />
+        <folder expanded="1" path="animation-folder/DCrytal/" />
+        <folder expanded="1" path="animation-folder/MText/" />
+        <folder expanded="1" path="animation-folder/GameOver/" />
+        <folder expanded="1" path="animation-folder/Home/" />
+        <folder expanded="1" path="animation-folder/Restart/" />
+        <folder expanded="1" path="animation-folder/Win/" />
+        <folder expanded="1" path="animation-folder/Star/" />
+        <folder expanded="1" path="animation-folder/C1/" />
+        <folder expanded="1" path="animation-folder/C2/" />
+        <folder expanded="1" path="animation-folder/CD/" />
+        <folder expanded="1" path="animation-folder/CDPic/" />
+        <folder expanded="1" path="animation-folder/pai/" />
+        <folder expanded="1" path="animation-folder/TPic/" />
+        <folder expanded="1" path="animation-folder/BHPFrame/" />
+    </folders-expanded>
+</c2uistate>

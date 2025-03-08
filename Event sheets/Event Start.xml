@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Start</name>
+    <events>
+        <variable constant="0" name="M" sid="393910958545549" static="0" type="number">0</variable>
+        <event-block sid="155431656235912">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="522587619726692" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="298527543256406" type="Audio">
+                    <param id="0" name="Tag">&quot;BG&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="445675523803297" type="Audio">
+                    <param id="0" name="Audio file">Menu</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="910352640116674">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="342389870133137" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">StartButton</param>
+                </condition>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="563588151096220" type="BGOption" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="405481346866737" type="System">
+                    <param id="0" name="Layout">Game1</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="460649528432318" type="System" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="481052453609131" title="Option">
+            <sub-events>
+                <event-block sid="661239412864176">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="396096721376110" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">OptionButton</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="161537323770171" type="BGOption" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="366797443899859" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="987723432698551" type="BGOption">
+                            <param id="0" name="X">937</param>
+                            <param id="1" name="Y">474</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="107577801988164" type="MuteBG">
+                            <param id="0" name="X">960</param>
+                            <param id="1" name="Y">608</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="420360605447239" type="MText">
+                            <param id="0" name="X">960</param>
+                            <param id="1" name="Y">352</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="809033484628909" type="BackButton">
+                            <param id="0" name="X">205</param>
+                            <param id="1" name="Y">971</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="922064226565111">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="494845543864490" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">BackButton</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="251162478242507" type="BackButton" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="738098839769016" type="BGOption">
+                            <param id="0" name="X">9999</param>
+                            <param id="1" name="Y">9999</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="513358296027017" type="MuteBG">
+                            <param id="0" name="X">9999</param>
+                            <param id="1" name="Y">9999</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="319588240818655" type="MText">
+                            <param id="0" name="X">9999</param>
+                            <param id="1" name="Y">9999</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="343201354343695" type="BackButton">
+                            <param id="0" name="X">9999</param>
+                            <param id="1" name="Y">9999</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="427819167374617">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="165622819216308" type="System">
+                            <param id="0" name="Variable">M</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="332825920134344" type="Audio">
+                            <param id="0" name="Tag">&quot;BG&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="703220254839487" type="MuteBG">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="209210081400679">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="159085932955312" type="System">
+                            <param id="0" name="Variable">M</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="758243335390954" type="Audio">
+                            <param id="0" name="Tag">&quot;BG&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="239119469690195" type="MuteBG">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="393580541538940">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="613917566036974" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">MuteBG</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="160817280316221" type="MuteBG" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="474732165327656">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="578488703320692" type="MuteBG">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="711601262647691" type="System">
+                                    <param id="0" name="Variable">M</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="786854949049138" type="MuteBG">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="262737632812083">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="227915557570337" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="545876809858827" type="System">
+                                    <param id="0" name="Variable">M</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="230060127280259" type="MuteBG">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="240653061688697">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="623556403602353" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">ExisButton</param>
+                </condition>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="975137207247978" type="BGOption" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="579101720043057" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="1" name="Close" sid="229841637406180" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="735785954839157">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="740064817915680" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">CD</param>
+                </condition>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="942611765331659" type="BGOption" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="390340628576635" type="BGOption">
+                    <param id="0" name="X">937</param>
+                    <param id="1" name="Y">474</param>
+                </action>
+                <action id="-3" name="Create object" sid="182563697004112" type="System">
+                    <param id="0" name="Object to create">CDPic</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">960</param>
+                    <param id="3" name="Y">2240</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="815053972393110" type="CDPic">
+                    <param id="0" name="Angle">270</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="190634934834652">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="860432424981977" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">CDPic</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="224046318020811" type="BGOption" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="217362947697184" type="BGOption">
+                    <param id="0" name="X">9999</param>
+                    <param id="1" name="Y">9999</param>
+                </action>
+                <action id="-9" name="Destroy" sid="747875301368049" type="CDPic" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

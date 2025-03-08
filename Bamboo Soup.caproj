@@ -1,0 +1,2529 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Bamboo Soup</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3ntiby4s34o0o</unique-id>
+    <saved-with-version>27500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1080</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Start</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="BG1" sid="649893584497246">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\พื้นหลัง.png" />
+        </object-type>
+        <object-type name="M2" sid="558584567705518">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\Mountain2.png" />
+        </object-type>
+        <object-type name="M1" sid="522289508305973">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\Mountain1.png" />
+        </object-type>
+        <object-type name="Ban" sid="558503214755992">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\Village.png" />
+        </object-type>
+        <object-type name="Ground" sid="918234573201088">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\Ground.png" />
+        </object-type>
+        <object-type name="WaterBack" sid="189036681149936">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Sine" sid="205665688988793">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\kao_1\Downloads\Water_Back.png" />
+        </object-type>
+        <object-type name="WaterMiddle" sid="608497910760812">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Sine" sid="709960358243199">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\kao_1\Downloads\Water_Middle.png" />
+        </object-type>
+        <object-type name="WaterFront" sid="686957614030046">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Sine" sid="820705600721150">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\kao_1\Downloads\Water_Front.png" />
+        </object-type>
+        <object-type name="Mom" sid="827027408676961">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="164942006982008">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="752791516862239">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="200203698911585">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="506926349351452" speed="5">
+                    <frame duration="1" hotspotX="0.503268" hotspotY="1" original-source="C:\Users\kao_1\Downloads\IdleMom.png">
+                        <image-point name="Imagepoint 1" x="0.503268" y="0.501961" />
+                        <image-point name="Imagepoint 2" x="0.503268" y="0.501961" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503268" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.503268" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.503268" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.506494" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501976" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.501976" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503268" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.503268" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.503268" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.506494" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501976" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.501976" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503268" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.503268" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.503268" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="789630993879180" speed="7">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\kao_1\Downloads\WalkMom.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503311" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.503311" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.503311" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="0" name="Atk" pingpong="0" repeatcount="1" repeatto="0" sid="249730280783262" speed="8">
+                    <frame duration="1" hotspotX="0.432836" hotspotY="1" original-source="C:\Users\kao_1\Downloads\AttackMom.png">
+                        <image-point name="Imagepoint 1" x="0.945274" y="0.43254" />
+                        <image-point name="Imagepoint 2" x="0.502488" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.426471" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.931373" y="0.422764" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.42029" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.942029" y="0.405738" />
+                        <image-point name="Imagepoint 2" x="0.502415" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.432836" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.930348" y="0.43254" />
+                        <image-point name="Imagepoint 2" x="0.502488" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.427136" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.502513" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.423077" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.732026" y="0" />
+                            <point x="0.732026" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="Die" pingpong="0" repeatcount="1" repeatto="0" sid="165468322426712" speed="7">
+                    <frame duration="1" hotspotX="0.503268" hotspotY="1" original-source="C:\Users\kao_1\Downloads\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\kao_1\Downloads\2.png" />
+                    <frame duration="1" hotspotX="0.503226" hotspotY="1" original-source="C:\Users\kao_1\Downloads\3.png" />
+                    <frame duration="1" hotspotX="0.503311" hotspotY="1" original-source="C:\Users\kao_1\Downloads\4.png" />
+                    <frame duration="1" hotspotX="0.503145" hotspotY="1" original-source="C:\Users\kao_1\Downloads\5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RealGround" sid="727043379337081">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="192926586020322">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Keyboard" sid="770240929147447">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="816861185480447">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Browser" sid="374516933444729">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="BallFire" sid="820386661282080">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="627254937999718">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="740747677598564" speed="8">
+                    <frame duration="1" hotspotX="0" hotspotY="0.508475" original-source="C:\Users\kao_1\Downloads\fire.png">
+                        <collision-poly>
+                            <point x="0.214286" y="0.220339" />
+                            <point x="1" y="0.0338983" />
+                            <point x="1" y="0.20339" />
+                            <point x="1" y="0.508475" />
+                            <point x="1" y="0.847458" />
+                            <point x="1" y="0.966102" />
+                            <point x="0.214286" y="0.79661" />
+                            <point x="0.114286" y="0.508475" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.507937">
+                        <collision-poly>
+                            <point x="0" y="0.238095" />
+                            <point x="0.5" y="0.0634921" />
+                            <point x="1" y="0.222222" />
+                            <point x="1" y="0.507937" />
+                            <point x="1" y="0.825397" />
+                            <point x="0.5" y="0.936508" />
+                            <point x="0" y="0.777778" />
+                            <point x="0" y="0.507937" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.509091">
+                        <collision-poly>
+                            <point x="0" y="0.181818" />
+                            <point x="0" y="0" />
+                            <point x="0.84507" y="0.163636" />
+                            <point x="0.971831" y="0.490909" />
+                            <point x="0.873239" y="0.854545" />
+                            <point x="0" y="0.981818" />
+                            <point x="0" y="0.8" />
+                            <point x="0" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sister" sid="696288668301419">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="682123288915280">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="609429604173851">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="166125679890745">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="374165500499625" speed="5">
+                    <frame duration="1" hotspotX="0.409091" hotspotY="1" original-source="C:\Users\kao_1\Downloads\6.png">
+                        <image-point name="Imagepoint 1" x="-7.90909" y="4.89671" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.502347" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.569061" y="0" />
+                            <point x="0.56906" y="0.995434" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.411111" hotspotY="1" original-source="C:\Users\kao_1\Downloads\5.png">
+                        <image-point name="Imagepoint 1" x="-8.3" y="6.42593" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.569061" y="0" />
+                            <point x="0.56906" y="0.995434" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.411111" hotspotY="1" original-source="C:\Users\kao_1\Downloads\4.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.502326" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.502326" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.569061" y="0" />
+                            <point x="0.56906" y="0.995434" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.411111" hotspotY="1" original-source="C:\Users\kao_1\Downloads\3.png">
+                        <image-point name="Imagepoint 1" x="-7.81111" y="6.57407" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.569061" y="0" />
+                            <point x="0.56906" y="0.995434" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.409091" hotspotY="1" original-source="C:\Users\kao_1\Downloads\2.png">
+                        <image-point name="Imagepoint 1" x="-8.40909" y="6.84977" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.502347" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.569061" y="0" />
+                            <point x="0.56906" y="0.995434" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.40884" hotspotY="1" original-source="C:\Users\kao_1\Downloads\1.png">
+                        <image-point name="Imagepoint 1" x="-9.71271" y="5.94521" />
+                        <image-point name="Imagepoint 2" x="0.502762" y="0.502283" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.569061" y="0" />
+                            <point x="0.56906" y="0.995434" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="634826271288420" speed="10">
+                    <frame duration="1" hotspotX="0.502857" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="-5.12571" y="6.54167" />
+                        <image-point name="Imagepoint 2" x="0.502857" y="0.5" />
+                        <collision-poly>
+                            <point x="0.216845" y="0.588734" />
+                            <point x="0.629987" y="0.1268" />
+                            <point x="0.906515" y="0.205405" />
+                            <point x="0.856287" y="1" />
+                            <point x="0.167665" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502994" hotspotY="1" original-source="C:\Users\kao_1\Downloads\RunSister.png">
+                        <image-point name="Imagepoint 1" x="-5.82635" y="6.55941" />
+                        <image-point name="Imagepoint 2" x="0.502994" y="0.5" />
+                        <collision-poly>
+                            <point x="0.198881" y="0.658041" />
+                            <point x="0.629987" y="0.1268" />
+                            <point x="0.906515" y="0.205405" />
+                            <point x="0.856287" y="1" />
+                            <point x="0.167665" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502732" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="-5.01093" y="7.11892" />
+                        <image-point name="Imagepoint 2" x="0.502732" y="0.502703" />
+                        <collision-poly>
+                            <point x="0.216845" y="0.588734" />
+                            <point x="0.629987" y="0.1268" />
+                            <point x="0.906515" y="0.205405" />
+                            <point x="0.856287" y="1" />
+                            <point x="0.167665" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="-5.35714" y="7.13918" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0.216845" y="0.588734" />
+                            <point x="0.629987" y="0.1268" />
+                            <point x="0.906515" y="0.205405" />
+                            <point x="0.856287" y="1" />
+                            <point x="0.167665" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503185" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="-6.17834" y="6.73367" />
+                        <image-point name="Imagepoint 2" x="0.503185" y="0.502513" />
+                        <collision-poly>
+                            <point x="0.178629" y="0.674161" />
+                            <point x="0.629987" y="0.1268" />
+                            <point x="0.906515" y="0.205405" />
+                            <point x="0.856287" y="1" />
+                            <point x="0.167665" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="-7.44595" y="7.28788" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0.196575" y="0.709946" />
+                            <point x="0.629987" y="0.1268" />
+                            <point x="0.906515" y="0.205405" />
+                            <point x="0.856287" y="1" />
+                            <point x="0.167665" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="Atk" pingpong="0" repeatcount="1" repeatto="0" sid="835246739311988" speed="13">
+                    <frame duration="1" hotspotX="0.503311" hotspotY="1" original-source="C:\Users\kao_1\Downloads\AttackSister.png">
+                        <image-point name="Imagepoint 1" x="-6.07285" y="5.87854" />
+                        <image-point name="Imagepoint 2" x="0.503311" y="0.502024" />
+                        <collision-poly>
+                            <point x="0" y="0.226721" />
+                            <point x="1" y="0.222672" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="-8.75" y="5.3125" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0.265625" />
+                            <point x="1" y="0.265625" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.345865" hotspotY="0.990291">
+                        <image-point name="Imagepoint 1" x="0.860902" y="0.791262" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.582707" y="0" />
+                            <point x="0.571429" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.340741" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.866667" y="0.787129" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.574074" y="0" />
+                            <point x="0.57037" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.338235" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.867647" y="0.789744" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.502564" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.584559" y="0" />
+                            <point x="0.547794" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.327189" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="-5.88018" y="6.14286" />
+                        <image-point name="Imagepoint 2" x="0.502304" y="0.502304" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.552996" y="0" />
+                            <point x="0.525346" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.366337" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="-6.62871" y="5.96789" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.564356" y="0" />
+                            <point x="0.559405" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="Die" pingpong="0" repeatcount="1" repeatto="0" sid="805377625009769" speed="9">
+                    <frame duration="1" hotspotX="0.502762" hotspotY="1" original-source="C:\Users\kao_1\Downloads\1.png" />
+                    <frame duration="1" hotspotX="0.502439" hotspotY="1" original-source="C:\Users\kao_1\Downloads\2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\kao_1\Downloads\3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\kao_1\Downloads\4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\kao_1\Downloads\5.png" />
+                    <frame duration="1" hotspotX="0.502463" hotspotY="1" original-source="C:\Users\kao_1\Downloads\6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\kao_1\Downloads\7.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="P2Hit" sid="350909061521125">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="452024540014335" speed="5">
+                    <frame duration="1" hotspotX="0.504" hotspotY="0.652" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PSmoke" sid="366244975993169">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="10" loop="0" name="Smoke" pingpong="0" repeatcount="1" repeatto="0" sid="767811174873329" speed="13">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\kao_1\Downloads\5355228-removebg-preview.png">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="0.096" />
+                            <point x="1" y="0.568" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.511364" y="0.0518519" />
+                            <point x="1" y="0.192593" />
+                            <point x="0.818182" y="0.62963" />
+                            <point x="0.511364" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.0518518" />
+                            <point x="1" y="0.192593" />
+                            <point x="0" y="0.62963" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.507042" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.0656934" />
+                            <point x="0.84507" y="0.20438" />
+                            <point x="0" y="0.635036" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.506849" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.770833" />
+                            <point x="0.39726" y="0.798611" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.507042" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.793103" />
+                            <point x="0" y="0.82069" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.628571" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.628571" y="0.78" />
+                            <point x="0" y="0.806667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0" y="0" />
+                            <point x="0" y="0.777027" />
+                            <point x="0" y="0.804054" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.507692" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.769231" y="0" />
+                            <point x="0" y="0" />
+                            <point x="0" y="0.769231" />
+                            <point x="0" y="0.797203" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Smoke" sid="808983404009531">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="9" loop="0" name="Smoke" pingpong="0" repeatcount="1" repeatto="0" sid="913781966855494" speed="10">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\kao_1\Downloads\2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503356" original-source="C:\Users\kao_1\Downloads\3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502326" original-source="C:\Users\kao_1\Downloads\5.png" />
+                    <frame duration="1" hotspotX="0.502674" hotspotY="0.502488" original-source="C:\Users\kao_1\Downloads\6.png" />
+                    <frame duration="1" hotspotX="0.502959" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\7.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502793" original-source="C:\Users\kao_1\Downloads\8.png" />
+                    <frame duration="1" hotspotX="0.503067" hotspotY="0.503311" original-source="C:\Users\kao_1\Downloads\9.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BambooS1" sid="695047588801616">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="SP" sid="395664112194627" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="150084586018764">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="127747775636634">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="174057179486088" speed="6">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.505495" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.503759" hotspotY="1" original-source="C:\Users\kao_1\Downloads\BambooShoot.png">
+                        <image-point name="Imagepoint 1" x="0.503759" y="0.5" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.505747" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.506494" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.505882" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.505495" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BambooS2" sid="227795905090998">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="536708608369091">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="484247740044793">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="591920129343288">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="867952441653156" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\kao_1\Downloads\ShootV2IdleWalk.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.502825" />
+                        <collision-poly>
+                            <point x="0.462963" y="0" />
+                            <point x="0.712963" y="0" />
+                            <point x="0.925926" y="1" />
+                            <point x="0.259259" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502242" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.502242" y="0.5" />
+                        <collision-poly>
+                            <point x="0.462963" y="0" />
+                            <point x="0.712963" y="0" />
+                            <point x="0.941704" y="1" />
+                            <point x="0.259259" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502222" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.502222" y="0.502959" />
+                        <collision-poly>
+                            <point x="0.462963" y="0" />
+                            <point x="0.712963" y="0" />
+                            <point x="0.96" y="1" />
+                            <point x="0.223704" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502242" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.502242" y="0.5" />
+                        <collision-poly>
+                            <point x="0.462963" y="0" />
+                            <point x="0.712963" y="0" />
+                            <point x="0.946188" y="1" />
+                            <point x="0.259259" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="0" name="Atk" pingpong="0" repeatcount="1" repeatto="0" sid="668917078276562" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\kao_1\Downloads\ShootV2Attack.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.502959" />
+                        <collision-poly>
+                            <point x="0.347032" y="0" />
+                            <point x="0.812786" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.32967" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0.347032" y="0" />
+                            <point x="0.812786" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.329412" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0.29563" y="0" />
+                            <point x="0.812786" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50237" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.50237" y="0.502857" />
+                        <collision-poly>
+                            <point x="0.247506" y="0" />
+                            <point x="0.812786" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502439" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.502439" y="0.50289" />
+                        <collision-poly>
+                            <point x="0.283617" y="0" />
+                            <point x="0.812786" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502283" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.502283" y="0.5" />
+                        <collision-poly>
+                            <point x="0.347032" y="0" />
+                            <point x="0.812786" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.761363" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ehit" sid="876335010711576">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="666487802178683" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bamboo" sid="498892722515801">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="253362650508632">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="925231867941260" speed="5">
+                    <frame duration="1" hotspotX="0.503401" hotspotY="1" original-source="C:\Users\kao_1\Downloads\BambooIdle.png">
+                        <image-point name="Imagepoint 1" x="0.503401" y="0.502793" />
+                        <collision-poly>
+                            <point x="0.367347" y="0" />
+                            <point x="0.551021" y="0" />
+                            <point x="0.795919" y="1" />
+                            <point x="0.14966" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0.367347" y="0" />
+                            <point x="0.551021" y="0" />
+                            <point x="0.795919" y="1" />
+                            <point x="0.14966" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503268" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.503268" y="0.5" />
+                        <collision-poly>
+                            <point x="0.367347" y="0" />
+                            <point x="0.551021" y="0" />
+                            <point x="0.795919" y="1" />
+                            <point x="0.14966" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0.367347" y="0" />
+                            <point x="0.551021" y="0" />
+                            <point x="0.795919" y="1" />
+                            <point x="0.14966" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Atk" pingpong="0" repeatcount="1" repeatto="0" sid="480154837690234" speed="7">
+                    <frame duration="1" hotspotX="0.340136" hotspotY="0.988235" original-source="C:\Users\kao_1\Downloads\2.png">
+                        <image-point name="Imagepoint 1" x="0.503401" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.442177" y="0.429412" />
+                        <collision-poly>
+                            <point x="0.545703" y="0" />
+                            <point x="0.798027" y="0" />
+                            <point x="0.633707" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.331034" hotspotY="0.988439" original-source="C:\Users\kao_1\Downloads\3.png">
+                        <image-point name="Imagepoint 1" x="0.503448" y="0.50289" />
+                        <image-point name="Imagepoint 2" x="0.455172" y="0.416185" />
+                        <collision-poly>
+                            <point x="0.616076" y="0" />
+                            <point x="0.848179" y="0" />
+                            <point x="0.651676" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.355072" hotspotY="0.988439" original-source="C:\Users\kao_1\Downloads\4.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.50289" />
+                        <image-point name="Imagepoint 2" x="0.362319" y="0.398844" />
+                        <collision-poly>
+                            <point x="0.443662" y="0" />
+                            <point x="0.661972" y="0" />
+                            <point x="0.722291" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.422535" hotspotY="0.988571" original-source="C:\Users\kao_1\Downloads\5.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.502857" />
+                        <image-point name="Imagepoint 2" x="0.387324" y="0.422857" />
+                        <collision-poly>
+                            <point x="0.443662" y="0" />
+                            <point x="0.661972" y="0" />
+                            <point x="0.830986" y="1" />
+                            <point x="0.0774648" y="0.994286" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BBArrow" sid="426556190265365">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="849267900820244">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523472986580438" speed="5">
+                    <frame duration="1" hotspotX="0.518519" hotspotY="0.421053" original-source="C:\Users\kao_1\Downloads\Bamboo_Arrow.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Samurai" sid="252953782807929">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="440218352474375">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="258949665050986" speed="5">
+                    <frame duration="1" hotspotX="0.638095" hotspotY="1" original-source="C:\Users\kao_1\Downloads\SamuraiIdle.png">
+                        <image-point name="Imagepoint 1" x="0.647619" y="0.492857" />
+                        <collision-poly>
+                            <point x="0.580953" y="0" />
+                            <point x="0.690476" y="0" />
+                            <point x="0.971428" y="1" />
+                            <point x="0.357143" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.64" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.648889" y="0.492806" />
+                        <collision-poly>
+                            <point x="0.580953" y="0" />
+                            <point x="0.690476" y="0" />
+                            <point x="0.971428" y="1" />
+                            <point x="0.357143" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.635593" hotspotY="0.996337">
+                        <image-point name="Imagepoint 1" x="0.648305" y="0.494505" />
+                        <collision-poly>
+                            <point x="0.580953" y="0" />
+                            <point x="0.690476" y="0" />
+                            <point x="0.971428" y="1" />
+                            <point x="0.357143" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.64" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.648889" y="0.492806" />
+                        <collision-poly>
+                            <point x="0.580953" y="0" />
+                            <point x="0.690476" y="0" />
+                            <point x="0.971428" y="1" />
+                            <point x="0.357143" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="10" loop="0" name="Atk" pingpong="0" repeatcount="1" repeatto="0" sid="213644747171583" speed="15">
+                    <frame duration="1" hotspotX="0.502645" hotspotY="1" original-source="C:\Users\kao_1\Downloads\SamuraiAttack.png">
+                        <image-point name="Imagepoint 1" x="0.502645" y="0.501792" />
+                        <collision-poly>
+                            <point x="0.179894" y="0.677419" />
+                            <point x="0.248677" y="0.510753" />
+                            <point x="0.825397" y="0.222222" />
+                            <point x="0.68254" y="0.632617" />
+                            <point x="0.867725" y="1" />
+                            <point x="0.232804" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0.338843" y="0" />
+                            <point x="0.6281" y="0.217647" />
+                            <point x="0.785124" y="1" />
+                            <point x="0.301653" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.651558" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.643059" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0.0693431" />
+                            <point x="0.526911" y="0" />
+                            <point x="0.804532" y="0.470803" />
+                            <point x="0.810198" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.617225" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.61244" y="0.5" />
+                        <collision-poly>
+                            <point x="0.38756" y="0" />
+                            <point x="0.485646" y="0" />
+                            <point x="0.851674" y="0.445255" />
+                            <point x="0.909091" y="1" />
+                            <point x="0.311005" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.403509" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.397661" y="0.478102" />
+                        <collision-poly>
+                            <point x="0.266082" y="0" />
+                            <point x="0.453217" y="0" />
+                            <point x="0.608187" y="1" />
+                            <point x="0.24269" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.335244" hotspotY="1.00735">
+                        <image-point name="Imagepoint 1" x="0.329513" y="0.503676" />
+                        <collision-poly>
+                            <point x="0.2149" y="0" />
+                            <point x="0.292263" y="0" />
+                            <point x="0.426934" y="0.375" />
+                            <point x="0.498567" y="1" />
+                            <point x="0.174785" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="2" hotspotX="0.517413" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.502488" y="0.5" />
+                        <collision-poly>
+                            <point x="0.358209" y="0.263889" />
+                            <point x="0.487562" y="0.25" />
+                            <point x="0.830846" y="1" />
+                            <point x="0.223881" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="2" hotspotX="0.482072" hotspotY="1.0035">
+                        <image-point name="Imagepoint 1" x="0.454183" y="0.496504" />
+                        <collision-poly>
+                            <point x="0.294821" y="0.353147" />
+                            <point x="0.394422" y="0" />
+                            <point x="0.808765" y="0.297203" />
+                            <point x="0.705178" y="1" />
+                            <point x="0.258964" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="2" hotspotX="0.454167" hotspotY="0.992565">
+                        <image-point name="Imagepoint 1" x="0.420833" y="0.494424" />
+                        <collision-poly>
+                            <point x="0.308333" y="0" />
+                            <point x="0.4125" y="0" />
+                            <point x="0.7125" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="2" hotspotX="0.529703" hotspotY="0.992565">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501859" />
+                        <collision-poly>
+                            <point x="0.371287" y="0" />
+                            <point x="0.495049" y="0" />
+                            <point x="0.891089" y="1" />
+                            <point x="0.242574" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="10" loop="0" name="Atk2" pingpong="0" repeatcount="1" repeatto="0" sid="574316499624408" speed="15">
+                    <frame duration="1" hotspotX="0.502645" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.502645" y="0.501792" />
+                        <collision-poly>
+                            <point x="0.179894" y="0.677419" />
+                            <point x="0.248677" y="0.510753" />
+                            <point x="0.825397" y="0.222222" />
+                            <point x="0.68254" y="0.632617" />
+                            <point x="0.867725" y="1" />
+                            <point x="0.232804" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0.338843" y="0" />
+                            <point x="0.6281" y="0.217647" />
+                            <point x="0.785124" y="1" />
+                            <point x="0.301653" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.651558" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.643059" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0.0693431" />
+                            <point x="0.526911" y="0" />
+                            <point x="0.804532" y="0.470803" />
+                            <point x="0.810198" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.617225" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.61244" y="0.5" />
+                        <collision-poly>
+                            <point x="0.38756" y="0" />
+                            <point x="0.485646" y="0" />
+                            <point x="0.851674" y="0.445255" />
+                            <point x="0.909091" y="1" />
+                            <point x="0.311005" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.403509" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.397661" y="0.478102" />
+                        <collision-poly>
+                            <point x="0.266082" y="0" />
+                            <point x="0.453217" y="0" />
+                            <point x="0.608187" y="1" />
+                            <point x="0.24269" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.335244" hotspotY="1.00735">
+                        <image-point name="Imagepoint 1" x="0.329513" y="0.503676" />
+                        <collision-poly>
+                            <point x="0.2149" y="0" />
+                            <point x="0.292263" y="0" />
+                            <point x="0.426934" y="0.375" />
+                            <point x="0.498567" y="1" />
+                            <point x="0.174785" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.517413" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.502488" y="0.5" />
+                        <collision-poly>
+                            <point x="0.358209" y="0.263889" />
+                            <point x="0.487562" y="0.25" />
+                            <point x="0.830846" y="1" />
+                            <point x="0.223881" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.482072" hotspotY="1.0035">
+                        <image-point name="Imagepoint 1" x="0.454183" y="0.496504" />
+                        <collision-poly>
+                            <point x="0.294821" y="0.353147" />
+                            <point x="0.394422" y="0" />
+                            <point x="0.808765" y="0.297203" />
+                            <point x="0.705178" y="1" />
+                            <point x="0.258964" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.454167" hotspotY="0.992565">
+                        <image-point name="Imagepoint 1" x="0.420833" y="0.494424" />
+                        <collision-poly>
+                            <point x="0.308333" y="0" />
+                            <point x="0.4125" y="0" />
+                            <point x="0.7125" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.529703" hotspotY="0.992565">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501859" />
+                        <collision-poly>
+                            <point x="0.371287" y="0" />
+                            <point x="0.495049" y="0" />
+                            <point x="0.891089" y="1" />
+                            <point x="0.242574" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BGMenu" sid="775477657591976">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="100740849789792" speed="5">
+                    <frame duration="1" hotspotX="0.500069" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\Main Menu.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="StartButton" sid="902597343475899">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="376103558789826" speed="5">
+                    <frame duration="1" hotspotX="0.494366" hotspotY="0.292011" original-source="C:\Users\kao_1\Downloads\Start.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="OptionButton" sid="126206821426484">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="459490938790155" speed="5">
+                    <frame duration="1" hotspotX="0.463604" hotspotY="0.29096" original-source="C:\Users\kao_1\Downloads\Option.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ExisButton" sid="806856681394599">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="838296188795747" speed="5">
+                    <frame duration="1" hotspotX="0.439437" hotspotY="0.299479" original-source="C:\Users\kao_1\Downloads\Exit.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BGOption" sid="610315538155490">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="536248631037737" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BackButton" sid="876685469591036">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="657695870897825" speed="5">
+                    <frame duration="1" hotspotX="0.852891" hotspotY="0.434875" original-source="C:\Users\kao_1\Downloads\Back.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MuteBG" sid="823693423246882">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="388630662757390" speed="0">
+                    <frame duration="1" hotspotX="0.500286" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\Music on.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500286" original-source="C:\Users\kao_1\Downloads\Music off.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="958507797389830">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Door" sid="962093963240122">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="317427547585553" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BGFadeO" sid="447310443118197">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="355738898844425">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="831794734711000" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BGFadeI" sid="928894496611315">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="917381120491239">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="898014616289261" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BG2" sid="100431765359195">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\1_BG.png" />
+        </object-type>
+        <object-type name="M22" sid="407234989084195">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\2_MoutainBack.png" />
+        </object-type>
+        <object-type name="M21" sid="845662682799162">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\3_Moutian_Font.png" />
+        </object-type>
+        <object-type name="Namtok" sid="192995702395373">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\4_WaterFall.png" />
+        </object-type>
+        <object-type name="Ground2" sid="192588098846660">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\6_BambooPlatform.png" />
+        </object-type>
+        <object-type name="ForeGround" sid="259198109826861">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\7_ForeGrond.png" />
+        </object-type>
+        <object-type name="LightLay" sid="575999106232510">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\5_LightLay.png" />
+        </object-type>
+        <object-type name="tadpole" sid="798141969863493">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="924589827635151">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="7" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="942851942273370" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\1.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.471015" />
+                            <point x="0" y="0.471015" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50173" original-source="C:\Users\kao_1\Downloads\2.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.471015" />
+                            <point x="0" y="0.471015" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\3.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.471015" />
+                            <point x="0" y="0.471015" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501805" original-source="C:\Users\kao_1\Downloads\4.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.471015" />
+                            <point x="0" y="0.471015" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\5.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.471015" />
+                            <point x="0" y="0.471015" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\6.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.471015" />
+                            <point x="0" y="0.471015" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503759" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\7.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.471015" />
+                            <point x="0" y="0.471015" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Something" sid="370374317765499">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="m" sid="954095112711110" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="390773120525397" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Kob" sid="664852325078495">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="335923913703418">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="404297799850311">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="350143841029714">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="782721698783246" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\FrogFly.png" />
+                    <frame duration="1" hotspotX="0.502439" hotspotY="0.502262" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.502392" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.50237" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502242" />
+                </animation>
+                <animation framecount="10" loop="0" name="Atk" pingpong="0" repeatcount="1" repeatto="0" sid="257878334822654" speed="12">
+                    <frame duration="1" hotspotX="0.413636" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\1.png">
+                        <image-point name="Imagepoint 1" x="0.363636" y="0.536697" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.414097" hotspotY="0.502183" original-source="C:\Users\kao_1\Downloads\2.png">
+                        <image-point name="Imagepoint 1" x="0.365639" y="0.537118" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.412186" hotspotY="0.502058" original-source="C:\Users\kao_1\Downloads\3.png">
+                        <image-point name="Imagepoint 1" x="0.365591" y="0.539095" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.412409" hotspotY="0.502008" original-source="C:\Users\kao_1\Downloads\4.png">
+                        <image-point name="Imagepoint 1" x="0.364964" y="0.538153" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.414894" hotspotY="0.501961" original-source="C:\Users\kao_1\Downloads\5.png">
+                        <image-point name="Imagepoint 1" x="0.365248" y="0.537255" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.414286" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\6.png">
+                        <image-point name="Imagepoint 1" x="0.364286" y="0.535714" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.412409" hotspotY="0.502008" original-source="C:\Users\kao_1\Downloads\8.png">
+                        <image-point name="Imagepoint 1" x="0.364964" y="0.538153" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.414966" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\7.png">
+                        <image-point name="Imagepoint 1" x="0.363946" y="0.536765" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.412186" hotspotY="0.502058" original-source="C:\Users\kao_1\Downloads\9.png">
+                        <image-point name="Imagepoint 1" x="0.365591" y="0.539095" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.414097" hotspotY="0.502183" original-source="C:\Users\kao_1\Downloads\10.png">
+                        <image-point name="Imagepoint 1" x="0.365639" y="0.537118" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BallWater" sid="984296071483723">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="146286805236005">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="0" name="Shoot" pingpong="0" repeatcount="1" repeatto="0" sid="712190977071231" speed="10">
+                    <frame duration="1" hotspotX="0.444444" hotspotY="0.534483" original-source="C:\Users\kao_1\Downloads\1.png" />
+                    <frame duration="1" hotspotX="0.382979" hotspotY="0.54" original-source="C:\Users\kao_1\Downloads\2.png" />
+                    <frame duration="1" hotspotX="0.62069" hotspotY="0.568627" original-source="C:\Users\kao_1\Downloads\3.png" />
+                    <frame duration="1" hotspotX="0.911504" hotspotY="0.554622" original-source="C:\Users\kao_1\Downloads\4.png" />
+                    <frame duration="1" hotspotX="0.933185" hotspotY="0.534351" original-source="C:\Users\kao_1\Downloads\5.png" />
+                    <frame duration="1" hotspotX="0.950207" hotspotY="0.630573" original-source="C:\Users\kao_1\Downloads\6.png" />
+                    <frame duration="1" hotspotX="0.872881" hotspotY="0.537037" original-source="C:\Users\kao_1\Downloads\7.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.830508" y="0" />
+                            <point x="0.823729" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="1.53982" hotspotY="0.650406" original-source="C:\Users\kao_1\Downloads\8.png" />
+                    <frame duration="1" hotspotX="3.80556" hotspotY="0.578616" original-source="C:\Users\kao_1\Downloads\9.png" />
+                    <frame duration="1" hotspotX="8.90164" hotspotY="0.582677" original-source="C:\Users\kao_1\Downloads\10.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameName" sid="883833697274544">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="803805968605671">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="358412090058677" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\Bamboo.png">
+                        <collision-poly>
+                            <point x="0.145923" y="0.316279" />
+                            <point x="0.5" y="0.286047" />
+                            <point x="0.824034" y="0.381395" />
+                            <point x="0.790057" y="0.5" />
+                            <point x="0.5" y="0.817054" />
+                            <point x="0.25" y="0.45814" />
+                            <point x="0.144134" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mushroom" sid="707637924979896">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="409713196149015">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="995470631911790" speed="5">
+                    <frame duration="1" hotspotX="0.47931" hotspotY="0.911032" original-source="C:\Users\kao_1\Downloads\1.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501779" />
+                        <collision-poly>
+                            <point x="0.0713436" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.901458" />
+                            <point x="0.0570749" y="0.901458" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47931" hotspotY="0.911032" original-source="C:\Users\kao_1\Downloads\2.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501779" />
+                        <collision-poly>
+                            <point x="0.0713436" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.901458" />
+                            <point x="0.0570749" y="0.901458" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47931" hotspotY="0.911032" original-source="C:\Users\kao_1\Downloads\3.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501779" />
+                        <collision-poly>
+                            <point x="0.0713436" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.901458" />
+                            <point x="0.0570749" y="0.901458" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47931" hotspotY="0.911032" original-source="C:\Users\kao_1\Downloads\4.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501779" />
+                        <collision-poly>
+                            <point x="0.0713436" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.901458" />
+                            <point x="0.0570749" y="0.901458" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="Atk" pingpong="0" repeatcount="1" repeatto="0" sid="243490728877358" speed="6">
+                    <frame duration="1" hotspotX="0.47931" hotspotY="0.911032" original-source="C:\Users\kao_1\Downloads\7.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501779" />
+                        <image-point name="Imagepoint 2" x="0.3" y="0.455516" />
+                        <collision-poly>
+                            <point x="0.0689655" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.911032" />
+                            <point x="0.0551724" y="0.911032" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47931" hotspotY="0.911032" original-source="C:\Users\kao_1\Downloads\2.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501779" />
+                        <image-point name="Imagepoint 2" x="0.3" y="0.455516" />
+                        <collision-poly>
+                            <point x="0.0689655" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.911032" />
+                            <point x="0.0551724" y="0.911032" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47931" hotspotY="0.911032" original-source="C:\Users\kao_1\Downloads\6.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501779" />
+                        <image-point name="Imagepoint 2" x="0.3" y="0.455516" />
+                        <collision-poly>
+                            <point x="0.0689655" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.911032" />
+                            <point x="0.0551724" y="0.911032" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47931" hotspotY="0.911032" original-source="C:\Users\kao_1\Downloads\3.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501779" />
+                        <image-point name="Imagepoint 2" x="0.3" y="0.455516" />
+                        <collision-poly>
+                            <point x="0.0689655" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.911032" />
+                            <point x="0.0551724" y="0.911032" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47931" hotspotY="0.911032" original-source="C:\Users\kao_1\Downloads\4.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501779" />
+                        <image-point name="Imagepoint 2" x="0.3" y="0.455516" />
+                        <collision-poly>
+                            <point x="0.0689655" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.911032" />
+                            <point x="0.0551724" y="0.911032" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47931" hotspotY="0.911032" original-source="C:\Users\kao_1\Downloads\5.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501779" />
+                        <image-point name="Imagepoint 2" x="0.3" y="0.455516" />
+                        <collision-poly>
+                            <point x="0.0689655" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.911032" />
+                            <point x="0.0551724" y="0.911032" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47931" hotspotY="0.911032" original-source="C:\Users\kao_1\Downloads\8.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.501779" />
+                        <image-point name="Imagepoint 2" x="0.3" y="0.455516" />
+                        <collision-poly>
+                            <point x="0.0689655" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.911032" />
+                            <point x="0.0551724" y="0.911032" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Spore" sid="303012345473695">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="155623685047990">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="816170282354309">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155595254117677" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.536965" original-source="C:\Users\kao_1\Downloads\4 (1).png">
+                        <collision-poly>
+                            <point x="0.424603" y="0.416342" />
+                            <point x="0.5" y="0.396887" />
+                            <point x="0.563492" y="0.428016" />
+                            <point x="0.603175" y="0.498054" />
+                            <point x="0.59127" y="0.599222" />
+                            <point x="0.5" y="0.657588" />
+                            <point x="0.396825" y="0.610895" />
+                            <point x="0.373016" y="0.498054" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.536965" original-source="C:\Users\kao_1\Downloads\3 (1).png">
+                        <collision-poly>
+                            <point x="0.424603" y="0.416342" />
+                            <point x="0.5" y="0.396887" />
+                            <point x="0.563492" y="0.428016" />
+                            <point x="0.603175" y="0.498054" />
+                            <point x="0.59127" y="0.599222" />
+                            <point x="0.5" y="0.657588" />
+                            <point x="0.396825" y="0.610895" />
+                            <point x="0.373016" y="0.498054" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.536965" original-source="C:\Users\kao_1\Downloads\2 (1).png">
+                        <collision-poly>
+                            <point x="0.424603" y="0.416342" />
+                            <point x="0.5" y="0.396887" />
+                            <point x="0.563492" y="0.428016" />
+                            <point x="0.603175" y="0.498054" />
+                            <point x="0.59127" y="0.599222" />
+                            <point x="0.5" y="0.657588" />
+                            <point x="0.396825" y="0.610895" />
+                            <point x="0.373016" y="0.498054" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.536965" original-source="C:\Users\kao_1\Downloads\1 (1).png">
+                        <collision-poly>
+                            <point x="0.424603" y="0.416342" />
+                            <point x="0.5" y="0.396887" />
+                            <point x="0.563492" y="0.428016" />
+                            <point x="0.603175" y="0.498054" />
+                            <point x="0.59127" y="0.599222" />
+                            <point x="0.5" y="0.657588" />
+                            <point x="0.396825" y="0.610895" />
+                            <point x="0.373016" y="0.498054" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MPop" sid="292804057961292">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="912984160137092" speed="9">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50108" original-source="C:\Users\kao_1\Downloads\1.png">
+                        <collision-poly>
+                            <point x="0.160494" y="0.539957" />
+                            <point x="0.248971" y="0.261339" />
+                            <point x="0.518519" y="0.138229" />
+                            <point x="0.761317" y="0.286177" />
+                            <point x="0.855967" y="0.529158" />
+                            <point x="0.720165" y="0.775378" />
+                            <point x="0.477366" y="0.892008" />
+                            <point x="0.269547" y="0.767819" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501023" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\2.png">
+                        <collision-poly>
+                            <point x="0.144134" y="0.514852" />
+                            <point x="0.244881" y="0.23205" />
+                            <point x="0.524654" y="0.131953" />
+                            <point x="0.773587" y="0.277809" />
+                            <point x="0.855967" y="0.529158" />
+                            <point x="0.720165" y="0.775378" />
+                            <point x="0.477366" y="0.892008" />
+                            <point x="0.269547" y="0.767819" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.500938" hotspotY="0.500963" original-source="C:\Users\kao_1\Downloads\3.png">
+                        <collision-poly>
+                            <point x="0.122971" y="0.474446" />
+                            <point x="0.218952" y="0.22473" />
+                            <point x="0.539157" y="0.1074" />
+                            <point x="0.817602" y="0.251495" />
+                            <point x="0.855967" y="0.529158" />
+                            <point x="0.720165" y="0.775378" />
+                            <point x="0.477366" y="0.892008" />
+                            <point x="0.269547" y="0.767819" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.500945" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\4.png">
+                        <collision-poly>
+                            <point x="0.117016" y="0.493315" />
+                            <point x="0.220616" y="0.218429" />
+                            <point x="0.518519" y="0.100916" />
+                            <point x="0.802905" y="0.248864" />
+                            <point x="0.884322" y="0.512367" />
+                            <point x="0.720165" y="0.775378" />
+                            <point x="0.477366" y="0.892008" />
+                            <point x="0.269547" y="0.767819" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BG3" sid="118552298007722">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\Background.png" />
+        </object-type>
+        <object-type name="Paar" sid="481565195882375">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\2_BG.png" />
+        </object-type>
+        <object-type name="Crystal" sid="215105012085180">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\Crystal.png" />
+        </object-type>
+        <object-type name="Ground3" sid="370389054689893">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\Ground.png" />
+        </object-type>
+        <object-type name="Boss" sid="926100078406792">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="T" sid="286695257824009" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="483515493713281">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="383004059918298">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="233154136648075" speed="6">
+                    <frame duration="1" hotspotX="0.324027" hotspotY="0.945865" original-source="C:\Users\kao_1\Downloads\4.png">
+                        <image-point name="Imagepoint 1" x="0" y="0.845113" />
+                        <image-point name="Imagepoint 2" x="0.344332" y="0.500752" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.324324" hotspotY="0.945701" original-source="C:\Users\kao_1\Downloads\1.png">
+                        <image-point name="Imagepoint 1" x="0" y="0.844646" />
+                        <image-point name="Imagepoint 2" x="0.344595" y="0.500754" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.324324" hotspotY="0.945455" original-source="C:\Users\kao_1\Downloads\6.png">
+                        <image-point name="Imagepoint 1" x="0" y="0.843939" />
+                        <image-point name="Imagepoint 2" x="0.344595" y="0.5" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.324324" hotspotY="0.945455" original-source="C:\Users\kao_1\Downloads\2.png">
+                        <image-point name="Imagepoint 1" x="0" y="0.843939" />
+                        <image-point name="Imagepoint 2" x="0.344595" y="0.5" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.324324" hotspotY="0.945205" original-source="C:\Users\kao_1\Downloads\3.png">
+                        <image-point name="Imagepoint 1" x="0" y="0.844749" />
+                        <image-point name="Imagepoint 2" x="0.344595" y="0.500761" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.324324" hotspotY="0.945205" original-source="C:\Users\kao_1\Downloads\5.png">
+                        <image-point name="Imagepoint 1" x="0" y="0.844749" />
+                        <image-point name="Imagepoint 2" x="0.344595" y="0.500761" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="727522828234772" speed="7">
+                    <frame duration="1" hotspotX="0.324097" hotspotY="0.945227" original-source="C:\Users\kao_1\Downloads\1 (1).png">
+                        <image-point name="Imagepoint 1" x="0" y="0.84507" />
+                        <image-point name="Imagepoint 2" x="0.344249" y="0.500782" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.324261" hotspotY="0.945227" original-source="C:\Users\kao_1\Downloads\2 (1).png">
+                        <image-point name="Imagepoint 1" x="0" y="0.84507" />
+                        <image-point name="Imagepoint 2" x="0.344479" y="0.500782" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.323985" hotspotY="0.944895" original-source="C:\Users\kao_1\Downloads\3 (1).png">
+                        <image-point name="Imagepoint 1" x="0" y="0.844408" />
+                        <image-point name="Imagepoint 2" x="0.344649" y="0.50081" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.32391" hotspotY="0.9456" original-source="C:\Users\kao_1\Downloads\4 (1).png">
+                        <image-point name="Imagepoint 1" x="0" y="0.8448" />
+                        <image-point name="Imagepoint 2" x="0.344911" y="0.5008" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.323988" hotspotY="0.944444" original-source="C:\Users\kao_1\Downloads\5 (1).png">
+                        <image-point name="Imagepoint 1" x="0" y="0.844444" />
+                        <image-point name="Imagepoint 2" x="0.344237" y="0.5" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.323944" hotspotY="0.945652" original-source="C:\Users\kao_1\Downloads\6 (1).png">
+                        <image-point name="Imagepoint 1" x="0" y="0.84472" />
+                        <image-point name="Imagepoint 2" x="0.3447" y="0.5" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.324089" hotspotY="0.944969" original-source="C:\Users\kao_1\Downloads\7.png">
+                        <image-point name="Imagepoint 1" x="0" y="0.84434" />
+                        <image-point name="Imagepoint 2" x="0.344691" y="0.5" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="0" name="Atk" pingpong="0" repeatcount="1" repeatto="0" sid="768358188919836" speed="5">
+                    <frame duration="1" hotspotX="0.324324" hotspotY="0.945701" original-source="C:\Users\kao_1\Downloads\1.png">
+                        <image-point name="Imagepoint 1" x="-0.162162" y="4.48265" />
+                        <image-point name="Imagepoint 2" x="0.344595" y="0.500754" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.39708" hotspotY="0.934641" original-source="C:\Users\kao_1\Downloads\2.png">
+                        <image-point name="Imagepoint 1" x="-0.0372263" y="4.78758" />
+                        <image-point name="Imagepoint 2" x="0.344526" y="0.5" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.399716" hotspotY="0.9712" original-source="C:\Users\kao_1\Downloads\3.png">
+                        <image-point name="Imagepoint 1" x="-0.0576102" y="4.6992" />
+                        <image-point name="Imagepoint 2" x="0.34495" y="0.5008" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.446852" hotspotY="0.962264" original-source="C:\Users\kao_1\Downloads\4.png">
+                        <image-point name="Imagepoint 1" x="-0.0013541" y="0.883648" />
+                        <image-point name="Imagepoint 2" x="0.344617" y="0.5" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.448649" hotspotY="0.955725" original-source="C:\Users\kao_1\Downloads\5.png">
+                        <image-point name="Imagepoint 1" x="-0.364865" y="4.65344" />
+                        <image-point name="Imagepoint 2" x="0.344595" y="0.500763" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.387292" hotspotY="0.952888" original-source="C:\Users\kao_1\Downloads\6.png">
+                        <image-point name="Imagepoint 1" x="-0.38351" y="4.65805" />
+                        <image-point name="Imagepoint 2" x="0.344932" y="0.5" />
+                        <collision-poly>
+                            <point x="0.342061" y="0" />
+                            <point x="0.471706" y="0.380091" />
+                            <point x="0.709459" y="0.639517" />
+                            <point x="1" y="0.933635" />
+                            <point x="0.148649" y="0.954751" />
+                            <point x="0.184122" y="0.12368" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="16" loop="0" name="Atk2" pingpong="0" repeatcount="1" repeatto="0" sid="329745569516323" speed="5">
+                    <frame duration="1" hotspotX="0.341216" hotspotY="0.93816" original-source="C:\Users\kao_1\Downloads\1.png">
+                        <image-point name="Imagepoint 1" x="-0.189189" y="4.09653" />
+                        <image-point name="Imagepoint 2" x="0.344595" y="0.500754" />
+                        <collision-poly>
+                            <point x="0.192568" y="0.120664" />
+                            <point x="0.344594" y="0.0241327" />
+                            <point x="1" y="0.921569" />
+                            <point x="0.152027" y="0.921569" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.430636" hotspotY="0.964838" original-source="C:\Users\kao_1\Downloads\2.png">
+                        <image-point name="Imagepoint 1" x="-0.309249" y="4.23629" />
+                        <image-point name="Imagepoint 2" x="0.344653" y="0.500703" />
+                        <collision-poly>
+                            <point x="0.0538392" y="0.0531531" />
+                            <point x="0.344594" y="0.0241327" />
+                            <point x="1" y="0.921569" />
+                            <point x="0.390173" y="0.927194" />
+                            <point x="0.415916" y="0.469584" />
+                            <point x="0.0428155" y="0.574562" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.355799" hotspotY="0.951902" original-source="C:\Users\kao_1\Downloads\3.png">
+                        <image-point name="Imagepoint 1" x="-0.164577" y="3.27405" />
+                        <image-point name="Imagepoint 2" x="0.344828" y="0.501119" />
+                        <collision-poly>
+                            <point x="0" y="0.160932" />
+                            <point x="0.259955" y="0" />
+                            <point x="1" y="0.921569" />
+                            <point x="0.316614" y="0.921569" />
+                            <point x="0.358934" y="0.559147" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.294773" hotspotY="0.965934" original-source="C:\Users\kao_1\Downloads\4.png">
+                        <image-point name="Imagepoint 1" x="0.0616967" y="3.4011" />
+                        <image-point name="Imagepoint 2" x="0.344473" y="0.501099" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.344594" y="0.0241327" />
+                            <point x="1" y="0.939151" />
+                            <point x="0.260497" y="0.925964" />
+                            <point x="0.298201" y="0.612433" />
+                            <point x="0" y="0.363359" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="2" hotspotX="0.464286" hotspotY="0.807143" original-source="C:\Users\kao_1\Downloads\5.png">
+                        <image-point name="Imagepoint 1" x="0.043956" y="0.785714" />
+                        <image-point name="Imagepoint 2" x="0.34478" y="0.5" />
+                        <collision-poly>
+                            <point x="0.154106" y="0.527807" />
+                            <point x="0.303385" y="0.309847" />
+                            <point x="1" y="0.792997" />
+                            <point x="0.162088" y="0.785854" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.475387" hotspotY="0.801431" original-source="C:\Users\kao_1\Downloads\6.png">
+                        <image-point name="Imagepoint 1" x="-0.220113" y="4.59392" />
+                        <image-point name="Imagepoint 2" x="0.344585" y="0.500894" />
+                        <collision-poly>
+                            <point x="0.186942" y="0.464134" />
+                            <point x="0.299587" y="0.296047" />
+                            <point x="1" y="0.785611" />
+                            <point x="0.165963" y="0.785611" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="2" hotspotX="0.464286" hotspotY="0.807143">
+                        <image-point name="Imagepoint 1" x="-0.17033" y="4.52857" />
+                        <image-point name="Imagepoint 2" x="0.34478" y="0.5" />
+                        <collision-poly>
+                            <point x="0.176084" y="0.477807" />
+                            <point x="0.297891" y="0.345561" />
+                            <point x="1" y="0.792997" />
+                            <point x="0.156593" y="0.764426" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.475387" hotspotY="0.801431">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.500894" />
+                        <image-point name="Imagepoint 2" x="0.344585" y="0.500894" />
+                        <collision-poly>
+                            <point x="0.198193" y="0.428356" />
+                            <point x="0.313652" y="0.303203" />
+                            <point x="1" y="0.785611" />
+                            <point x="0.154712" y="0.756989" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="2" hotspotX="0.464286" hotspotY="0.807143">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.34478" y="0.5" />
+                        <collision-poly>
+                            <point x="0.192568" y="0.43495" />
+                            <point x="0.303385" y="0.302704" />
+                            <point x="1" y="0.792997" />
+                            <point x="0.148352" y="0.671569" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.475387" hotspotY="0.801431">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.500894" />
+                        <image-point name="Imagepoint 2" x="0.344585" y="0.500894" />
+                        <collision-poly>
+                            <point x="0.209445" y="0.414045" />
+                            <point x="0.324903" y="0.310358" />
+                            <point x="1" y="0.785611" />
+                            <point x="0.140647" y="0.72121" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="2" hotspotX="0.464286" hotspotY="0.807143">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.34478" y="0.5" />
+                        <collision-poly>
+                            <point x="0.22004" y="0.38495" />
+                            <point x="0.297891" y="0.309847" />
+                            <point x="1" y="0.792997" />
+                            <point x="0.120879" y="0.764426" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.475387" hotspotY="0.801431">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.500894" />
+                        <image-point name="Imagepoint 2" x="0.344585" y="0.500894" />
+                        <collision-poly>
+                            <point x="0.226323" y="0.378267" />
+                            <point x="0.308026" y="0.303202" />
+                            <point x="1" y="0.785611" />
+                            <point x="0.132208" y="0.742677" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="2" hotspotX="0.464286" hotspotY="0.807143">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.34478" y="0.5" />
+                        <collision-poly>
+                            <point x="0.187073" y="0.427807" />
+                            <point x="0.303385" y="0.302704" />
+                            <point x="1" y="0.792997" />
+                            <point x="0.14011" y="0.728712" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.475387" hotspotY="0.801431">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.500894" />
+                        <image-point name="Imagepoint 2" x="0.344585" y="0.500894" />
+                        <collision-poly>
+                            <point x="0.19538" y="0.456979" />
+                            <point x="0.313652" y="0.296047" />
+                            <point x="1" y="0.785611" />
+                            <point x="0.151899" y="0.749833" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.451351" hotspotY="0.891892" original-source="C:\Users\kao_1\Downloads\7.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.344595" y="0.5" />
+                        <collision-poly>
+                            <point x="0.192568" y="0.120664" />
+                            <point x="0.344594" y="0.0241327" />
+                            <point x="1" y="0.901298" />
+                            <point x="0" y="0.881028" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.37037" hotspotY="0.922025" original-source="C:\Users\kao_1\Downloads\8.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.500684" />
+                        <image-point name="Imagepoint 2" x="0.344907" y="0.500684" />
+                        <collision-poly>
+                            <point x="0.192568" y="0.120664" />
+                            <point x="0.344594" y="0.0241327" />
+                            <point x="1" y="0.921569" />
+                            <point x="0" y="0.921569" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="Die" pingpong="0" repeatcount="1" repeatto="0" sid="124632679007922" speed="5">
+                    <frame duration="1" hotspotX="0.35473" hotspotY="0.92911">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.500754" />
+                        <image-point name="Imagepoint 2" x="0.344595" y="0.506787" />
+                        <collision-poly>
+                            <point x="0.172297" y="0.144796" />
+                            <point x="0.354729" y="0" />
+                            <point x="1" y="0.939668" />
+                            <point x="0" y="0.88537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.37037" hotspotY="0.922025">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.500684" />
+                        <image-point name="Imagepoint 2" x="0.344907" y="0.500684" />
+                        <collision-poly>
+                            <point x="0.192568" y="0.120664" />
+                            <point x="0.344594" y="0.0241327" />
+                            <point x="1" y="0.921569" />
+                            <point x="0" y="0.921569" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.451351" hotspotY="0.891892">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.344595" y="0.5" />
+                        <collision-poly>
+                            <point x="0.192568" y="0.120664" />
+                            <point x="0.344594" y="0.0241327" />
+                            <point x="1" y="0.901298" />
+                            <point x="0" y="0.881028" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.475387" hotspotY="0.801431">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.500894" />
+                        <image-point name="Imagepoint 2" x="0.344585" y="0.500894" />
+                        <collision-poly>
+                            <point x="0.19538" y="0.456979" />
+                            <point x="0.313652" y="0.296047" />
+                            <point x="1" y="0.785611" />
+                            <point x="0.151899" y="0.749833" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.464286" hotspotY="0.807143">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.34478" y="0.5" />
+                        <collision-poly>
+                            <point x="0.187073" y="0.427807" />
+                            <point x="0.303385" y="0.302704" />
+                            <point x="1" y="0.792997" />
+                            <point x="0.14011" y="0.728712" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Plant1" sid="481578178654948">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\Plant_front.png" />
+        </object-type>
+        <object-type name="Plant2" sid="557476629055868">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\Plant_Middle.png" />
+        </object-type>
+        <object-type name="Plant3" sid="896780771320495">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\Plant_Back.png" />
+        </object-type>
+        <object-type name="BossHit" sid="531636299007689">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="246155089637746" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.068" y="0.416" />
+                            <point x="0.936" y="0.416" />
+                            <point x="0.936" y="1" />
+                            <point x="0.064" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BossHP" sid="289129077328048">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kao_1\Downloads\Hp2.png" />
+        </object-type>
+        <object-type name="DCrytal" sid="300915359932631">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="728529643067149">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="S" pingpong="0" repeatcount="1" repeatto="0" sid="800082654485785" speed="0">
+                    <frame duration="1" hotspotX="0.496454" hotspotY="0.452247" original-source="C:\Users\kao_1\Downloads\1 (1).png">
+                        <collision-poly>
+                            <point x="0.560284" y="0.126404" />
+                            <point x="0.829787" y="0.601124" />
+                            <point x="0.489362" y="0.890449" />
+                            <point x="0.163121" y="0.570225" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="0" name="T" pingpong="0" repeatcount="1" repeatto="0" sid="399463635026939" speed="8">
+                    <frame duration="1" hotspotX="0.494048" hotspotY="0.453297" />
+                    <frame duration="1" hotspotX="0.546559" hotspotY="0.353896" />
+                    <frame duration="1" hotspotX="0.566929" hotspotY="0.201613" />
+                    <frame duration="1" hotspotX="0.566929" hotspotY="0.201613" />
+                    <frame duration="1" hotspotX="0.566929" hotspotY="0.201613" />
+                    <frame duration="1" hotspotX="0.56917" hotspotY="-0.18" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MText" sid="508870439026923">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="596322601617839" speed="5">
+                    <frame duration="1" hotspotX="0.500407" hotspotY="0.50591" original-source="C:\Users\kao_1\Downloads\Bg music.png">
+                        <collision-poly>
+                            <point x="0.146461" y="0.229314" />
+                            <point x="0.500407" y="0.00472813" />
+                            <point x="0.820179" y="0.427896" />
+                            <point x="0.903987" y="0.50591" />
+                            <point x="0.500407" y="0.87234" />
+                            <point x="0.141172" y="0.813239" />
+                            <point x="0.00244101" y="0.50591" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOver" sid="149308218714417">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="911676265068260" speed="5">
+                    <frame duration="1" hotspotX="0.498786" hotspotY="0.498695" original-source="C:\Users\kao_1\Downloads\Game over.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Home" sid="838134676934206">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="215466398835627" speed="5">
+                    <frame duration="1" hotspotX="0.500572" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\Home.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Restart" sid="930738835246918">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="312650626942551" speed="5">
+                    <frame duration="1" hotspotX="0.501424" hotspotY="0.499427" original-source="C:\Users\kao_1\Downloads\Restart.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Win" sid="880228493336671">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="129595679268738" speed="5">
+                    <frame duration="1" hotspotX="0.50411" hotspotY="0.60739" original-source="C:\Users\kao_1\Downloads\Win.png">
+                        <collision-poly>
+                            <point x="0.50411" y="0.0323326" />
+                            <point x="0.983562" y="0.60739" />
+                            <point x="0.985388" y="0.0854503" />
+                            <point x="0.50411" y="0.969977" />
+                            <point x="0.0356164" y="0.0531178" />
+                            <point x="0.0401827" y="0.60739" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Star" sid="159257814605255">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="640421055960067" speed="5">
+                    <frame duration="1" hotspotX="0.502278" hotspotY="0.501428" original-source="C:\Users\kao_1\Downloads\Achievement.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="C1" sid="819414525513339">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="526659100658253" speed="5">
+                    <frame duration="1" hotspotX="0.409712" hotspotY="0.520202" original-source="C:\Users\kao_1\Downloads\Crystal1.png">
+                        <collision-poly>
+                            <point x="0.210167" y="0.909933" />
+                            <point x="0.409332" y="0.000841751" />
+                            <point x="0.61874" y="0.520202" />
+                            <point x="0.626707" y="0.170034" />
+                            <point x="0.409332" y="0.912458" />
+                            <point x="0.240516" y="0.0631313" />
+                            <point x="0.126707" y="0.520202" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="C2" sid="254613947922733">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="176621840362749" speed="5">
+                    <frame duration="1" hotspotX="0.502412" hotspotY="0.500634" original-source="C:\Users\kao_1\Downloads\Crystal2.png">
+                        <collision-poly>
+                            <point x="0.101999" y="0.254753" />
+                            <point x="0.501723" y="0.00126743" />
+                            <point x="0.771881" y="0.494297" />
+                            <point x="0.968987" y="0.499366" />
+                            <point x="0.942798" y="0.820025" />
+                            <point x="0.501723" y="0.998733" />
+                            <point x="0.112336" y="0.726236" />
+                            <point x="0.0675396" y="0.499366" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CD" sid="259123867130113">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524611782780803" speed="5">
+                    <frame duration="1" hotspotX="0.509666" hotspotY="0.280769" original-source="C:\Users\kao_1\Downloads\Credit.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CDPic" sid="815623622226124">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Wrap" sid="518496262177266">
+                    <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="147753602918560">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="718901264901535" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.783322" original-source="C:\Users\kao_1\Downloads\Credit (1).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pai" sid="770417891429819">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="973337487782176" speed="5">
+                    <frame duration="1" hotspotX="0.311594" hotspotY="0.401818" original-source="C:\Users\kao_1\Downloads\Sign.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TPic" sid="740593272077354">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="935053569150725" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\Tutorial.png">
+                        <collision-poly>
+                            <point x="0.190104" y="0.337963" />
+                            <point x="0.5" y="0.0592593" />
+                            <point x="0.655208" y="0.387037" />
+                            <point x="0.5" y="0.39537" />
+                            <point x="0.344792" y="0.387037" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BHPFrame" sid="381951233705182">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="891466838625157" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kao_1\Downloads\Hpframe.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Start.xml</layout>
+        <layout>Game1.xml</layout>
+        <layout>Game2.xml</layout>
+        <layout>Game3.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event Start.xml</event-sheet>
+        <event-sheet>Event Game1.xml</event-sheet>
+        <event-sheet>Event Game2.xml</event-sheet>
+        <event-sheet>Event Controll.xml</event-sheet>
+        <event-sheet>Event Game3.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="12" />
+        <global-instance type="Mouse" uid="13" />
+        <global-instance type="Browser" uid="14" />
+        <global-instance type="Audio" uid="39">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Menu.ogg" />
+        <file name="Mom_Attack.ogg" />
+        <file name="Mom_Walk.ogg" />
+        <file name="Sister_Attack.ogg" />
+        <file name="Sister_Damaged.ogg" />
+        <file name="Sister_Run.ogg" />
+        <file name="Stage1.ogg" />
+        <file name="Stage2.ogg" />
+        <file name="Stage3.ogg" />
+        <file name="Bamboo_Attack.ogg" />
+        <file name="bamboo_Death.ogg" />
+        <file name="Samurai_Attack.ogg" />
+        <file name="slime_attack.ogg" />
+        <file name="slime_attacked.ogg" />
+        <file name="slime_walk.ogg" />
+        <file name="rock-destroy.ogg" />
+        <file name="flash.ogg" />
+        <file name="punch.ogg" />
+        <file name="win.ogg" />
+        <file name="star.ogg" />
+        <file name="glass.ogg" />
+        <file name="Gameover.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

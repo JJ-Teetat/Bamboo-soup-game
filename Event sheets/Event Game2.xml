@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Game2</name>
+    <events>
+        <include>Event Start</include>
+        <include>Event Controll</include>
+        <event-block sid="962621488102021">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="393383600621604" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="496221777039236" type="Audio">
+                    <param id="0" name="Tag">&quot;BG&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="349989160567910" type="Audio">
+                    <param id="0" name="Audio file">Stage2</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-25</param>
+                    <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
+                </action>
+                <action id="-3" name="Create object" sid="936135197669031" type="System">
+                    <param id="0" name="Object to create">BGFadeI</param>
+                    <param id="1" name="Layer">9</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="612977725998981" type="BGFadeI">
+                    <param id="0" name="Width">LayoutWidth*2</param>
+                    <param id="1" name="Height">LayoutHeight*2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="513576860437446">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="591116209825770" type="Mom">
+                    <param id="0" name="Object">Door</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="234724634127301" type="Sister">
+                    <param id="0" name="Object">Door</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="872322633090292" type="System">
+                    <param id="0" name="Object to create">BGFadeO</param>
+                    <param id="1" name="Layer">9</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="303745018768588" type="BGFadeO">
+                    <param id="0" name="Width">LayoutWidth*2</param>
+                    <param id="1" name="Height">LayoutHeight*2</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="881636687696975" type="BGFadeO" />
+                <action id="6" name="Stop" sid="697908646780623" type="Audio">
+                    <param id="0" name="Tag">&quot;FXMwalk&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="644762925558303" type="Audio">
+                    <param id="0" name="Tag">&quot;FXMatk&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="133571750658851" type="Audio">
+                    <param id="0" name="Tag">&quot;FXSwalk&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="386617266813475" type="Audio">
+                    <param id="0" name="Tag">&quot;FXSatk&quot;</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="305981599719908" type="Mom">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="996728963801055" type="Sister">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="534344159567293" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="169848957573613" type="System">
+                    <param id="0" name="Layout">Game3</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Controll</comment>
+        <event-block sid="358529418242108">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="656987091401284" type="Keyboard">
+                    <param id="0" name="Key">82</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="201574417794468">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="604106744076216" type="Mom" />
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="448993087270939" type="Mom" />
+                        <condition id="2" inverted="1" name="Is playing" sid="517595821626185" type="Mom">
+                            <param id="0" name="Animation">&quot;Die&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="410593703842447" type="Audio">
+                            <param id="0" name="Audio file">flash</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;FXF&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="652244267495322" type="Mom">
+                            <param id="0" name="Object">PSmoke</param>
+                            <param id="1" name="Layer">7</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="384347359561942" type="PSmoke">
+                            <param id="0" name="Animation">&quot;Smoke&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="385276953529024" type="System">
+                            <param id="0" name="Object to create">Sister</param>
+                            <param id="1" name="Layer">6</param>
+                            <param id="2" name="X">Mom.X</param>
+                            <param id="3" name="Y">Mom.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="455419570680701" type="Mom" />
+                        <action behavior="Flash" id="0" name="Flash" sid="741103605202096" type="Sister">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.3</param>
+                        </action>
+                        <action id="6" name="Stop" sid="630675956678867" type="Audio">
+                            <param id="0" name="Tag">&quot;FXMwalk&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="428373031248405" type="Audio">
+                            <param id="0" name="Tag">&quot;FXMatk&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="458694222328111">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="465145163951784" type="Mom" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="213120877273709" type="Sister">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="654187612454345">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="577680221701994" type="Mom" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="321588213528496" type="Sister">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="646708922307028">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="346668615784923" type="Sister" />
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="259873715534063" type="Sister" />
+                        <condition id="2" inverted="1" name="Is playing" sid="489172486456758" type="Sister">
+                            <param id="0" name="Animation">&quot;Die&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="173494123392135" type="Audio">
+                            <param id="0" name="Audio file">flash</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;FXF&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="822000834539193" type="Sister">
+                            <param id="0" name="Object">PSmoke</param>
+                            <param id="1" name="Layer">7</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="527508047720370" type="PSmoke">
+                            <param id="0" name="Animation">&quot;Smoke&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="642855018911187" type="System">
+                            <param id="0" name="Object to create">Mom</param>
+                            <param id="1" name="Layer">6</param>
+                            <param id="2" name="X">Sister.X</param>
+                            <param id="3" name="Y">Sister.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="745681617968511" type="Sister" />
+                        <action behavior="Flash" id="0" name="Flash" sid="528886049828145" type="Mom">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.3</param>
+                        </action>
+                        <action id="6" name="Stop" sid="544685130596939" type="Audio">
+                            <param id="0" name="Tag">&quot;FXSwalk&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="932971288579162" type="Audio">
+                            <param id="0" name="Tag">&quot;FXSatk&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="338007478401833">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="198228914100097" type="Sister" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="900207893903627" type="Mom">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="496673561165079">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="131852698804482" type="Sister" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="401147872254589" type="Mom">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="271595513045298">
+            <conditions>
+                <condition id="2" name="Is playing" sid="162522037245981" type="Sister">
+                    <param id="0" name="Animation">&quot;Die&quot;</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="101791615376442" type="Mom">
+                    <param id="0" name="Animation">&quot;Die&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="435305127044071" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Set position" sid="254894897868002" type="BGOption">
+                    <param id="0" name="X">937</param>
+                    <param id="1" name="Y">474</param>
+                </action>
+                <action id="-3" name="Set position" sid="816658910716063" type="GameOver">
+                    <param id="0" name="X">960</param>
+                    <param id="1" name="Y">288</param>
+                </action>
+                <action id="-3" name="Set position" sid="122764398750203" type="Restart">
+                    <param id="0" name="X">768</param>
+                    <param id="1" name="Y">832</param>
+                </action>
+                <action id="-3" name="Set position" sid="917943512867336" type="Home">
+                    <param id="0" name="X">1184</param>
+                    <param id="1" name="Y">832</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="980602941581094">
+            <conditions>
+                <condition id="4" name="On finished" sid="846443277338956" type="Sister">
+                    <param id="0" name="Animation">&quot;Die&quot;</param>
+                </condition>
+                <condition id="4" name="On finished" sid="381753742047749" type="Mom">
+                    <param id="0" name="Animation">&quot;Die&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="679959138249146" type="System">
+                    <param id="0" name="Seconds">1.2</param>
+                </action>
+                <action id="0" name="Play" sid="900849214779446" type="Audio">
+                    <param id="0" name="Audio file">Gameover</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="194638687873004">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="379528673054449" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Restart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="467195697446061" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="757101992843352">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="475625330773797" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Home</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="177032282531837" type="System">
+                    <param id="0" name="Layout">Start</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
